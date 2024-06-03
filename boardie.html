@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game</title>
+    <link rel="stylesheet" href="boardie.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="board"></div>
+        <div id="controls">
+            <button id="pause-button">Pause</button>
+            <button id="resume-button" class="hidden">Resume</button>
+            <button id="reset-button">Reset</button>
+        </div>
+        <div id="timer">
+            Player 1 Time: <span id="player1-time">300</span> | Player 2 Time: <span id="player2-time">300</span>
+        </div>
+        <div id="move-history">
+            <h3>Move History</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="boardie.js"></script>
+</body>
+</html>
+

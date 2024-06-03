@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 2px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    background-color: #333;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cell:nth-child(even) {
+    background-color: #a6d4fa;
+}
+
+.cell:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.cell.selected {
+    border: 2px solid #ff0;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: #45a049;
+}
+
+#timer, #move-history {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#timer {
+    font-weight: bold;
+}
+
+#move-history {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#move-history h3 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.titan::before {
+    content: "♔"; /* Unicode character for a crown */
+    font-size: 32px;
+    color: #f44336;
+}
+
+.tank {
+    <span style='font-size:100px;'>&#9951;</span>;
+    font-size: 32 px;
+    background-color: #4CAF50;
+    color: rgb(34, 173, 43);
+}
+
+.ricochet {
+    position: relative;
+}
+
+.ricochet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #2196F3;
+    transform: rotate(45deg);
+}
+
+.semi-ricochet::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background-color: #FFC107;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cannon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #9C27B0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cannon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #a42525;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
